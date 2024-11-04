@@ -1,0 +1,205 @@
+body{
+    text-align:justify;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    margin-top: 10px;       
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 17px;
+    padding: 50px;    
+    /*background: linear-gradient(135deg, white 0%, rgb(252, 242, 227) 100%);*/
+}
+
+/* Menu de Navegação */
+.barra-navegacao {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Garante que o menu fique acima do conteúdo */
+}
+
+.barra-navegacao ul {
+    list-style: none; 
+    display: flex; /* Exibe os itens em linha */
+    justify-content: center; /* Centraliza os itens */
+    margin: 0;
+    padding: 0;
+}
+
+.barra-navegacao li {
+    margin: 0 20px; /* Espaçamento entre os itens */
+}
+
+.barra-navegacao a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: burlywood; 
+    font-weight: bold; /* Texto em negrito */
+    transition: color 0.3s, transform 0.3s; /* Transição suave */
+}
+
+.barra-navegacao a:hover {
+    color: burlywood; /* Muda a cor ao passar o mouse */
+    transform: translateY(-2px); /* Levanta um pouco o link */
+}
+
+/*Caixa de alerta com cópia do código do cupom*/
+.frase-container{
+    display: flex;
+    align-items: center;
+}
+
+.frase-de-erro{
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.icon{
+    width: 25px;
+    height: 25px;
+}
+
+
+/*style da página*/
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: burlywood;
+}
+
+/* Animações de fundo gradiente*/
+@keyframes backgroundAnimation {
+    0% { background-color: #f5e8d6; } /* Um tom muito claro de Burlywood */
+    50% { background-color: #e7d6c1; } /* Um tom levemente mais escuro */
+    100% { background-color: #f5e8d6; } /* Retorna para o tom claro */
+}
+
+body {
+    animation: backgroundAnimation 10s infinite; /* Animação de fundo suave */
+}
+
+.cupons {
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza a lista de cupons */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+/*Card de cada cupom*/
+.cupom {    
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);    
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    
+}
+
+/*Ícone das páginas*/
+.icon{
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;  
+      
+}
+
+div p a:link{
+    color: black;
+    text-decoration: none;
+}
+
+div p a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+div p a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.codigo-cupom{
+    color: burlywood;
+}
+
+/*espaçamento entre nome dos parceiros*/
+.parceiro{
+    margin: auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background: burlywood; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background: rgb(112, 87, 55); /* Cor escura ao passar o mouse */
+}
+
+/*Mensagem de código copiado*/
+.notification {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    left: 20px;
+    background-color: burlywood; 
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 1s;   
+   
+}
+
+/*ícone Whatsapp*/
+.whatsapp-icon {
+    position: fixed;
+    bottom: 100px; 
+    right: 40px;  
+    background-color: #25D366; 
+    color: white; 
+    padding: 15px; 
+    border-radius: 50%; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    font-size: 24px; 
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E; /* Cor ao passar o mouse */
+}
+
+
+/*caso desejar deixar o layout responsivo a resoluções menores*/
+@media only screen and (max-width:768px){
+    body {font-size: 16px;
+
+    }
+
+}
+
+
+/*Rodpé da página*/
+footer{
+    /**position: fixed;**/
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    font-size: 14px;
+    padding-top: 100px;
+    padding-bottom: 50px;        
+}
