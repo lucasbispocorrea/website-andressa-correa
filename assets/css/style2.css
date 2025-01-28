@@ -33,13 +33,13 @@ body {
 
 .barra-navegacao a {
     text-decoration: none; /* Remove o sublinhado */
-    color: burlywood; 
+    color: #7ac9a2; 
     font-weight: bold; /* Texto em negrito */
     transition: color 0.3s, transform 0.3s; /* Transição suave */
 }
 
 .barra-navegacao a:hover {
-    color: burlywood; /* Muda a cor ao passar o mouse */
+    color: #7ac9a2; /* Muda a cor ao passar o mouse */
     transform: translateY(-2px); /* Levanta um pouco o link */
 }
 
@@ -58,7 +58,7 @@ header {
 
 h1 {
     font-size: 2.5em;
-    color: burlywood; 
+    color: #7ac9a2; 
 }
 
 /*Seção do conteúdo*/
@@ -108,7 +108,7 @@ video {
 }
 
 h2 {
-    color: burlywood; 
+    color: #7ac9a2; 
     margin-bottom: 10px;  
     /*ajuste que deve ser removido quando for trocar a foto pelo video  
     margin-top: -50px;*/
@@ -117,13 +117,26 @@ h2 {
 
 /* Animações de fundo gradiente*/
 @keyframes backgroundAnimation {
-    0% { background-color: #f5e8d6; } /* Um tom muito claro de Burlywood */
-    50% { background-color: #e7d6c1; } /* Um tom levemente mais escuro */
-    100% { background-color: #f5e8d6; } /* Retorna para o tom claro */
+    0% {
+        background: linear-gradient(45deg, #D0E8D4, #E1F2E1, #F1F9F1);
+      }
+      25% {
+        background: linear-gradient(45deg, #D0E8D4, #E1F2E1, #F1F9F1);
+      }
+      50% {
+        background: linear-gradient(45deg, #E1F2E1, #F1F9F1, #D0E8D4);
+      }
+      75% {
+        background: linear-gradient(45deg, #F1F9F1, #D0E8D4, #E1F2E1);
+      }
+      100% {
+        background: linear-gradient(45deg, #D0E8D4, #E1F2E1, #F1F9F1);
+      }
 }
 
 body {
-    animation: backgroundAnimation 10s infinite; /* Animação de fundo suave */
+    animation: backgroundAnimation 12s ease infinite; /* Animação de fundo suave */
+    background-size: 400% 400%;
 }
 
 /*caso desejar deixar o layout responsivo a resoluções menores*/

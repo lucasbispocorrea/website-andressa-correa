@@ -1,7 +1,7 @@
 body{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    color: burlywood;
+    color: #7ac9a2;
     background-color: white;
     margin-top: 10px;       
     justify-content: center;
@@ -26,12 +26,12 @@ h1{
 }
 
 .principal-img{    
-    width: 280px;
-    height: 280px;
+    width: 270px;
+    height: 270px;
     /**os dois acima aumentam o tamanho da imagem**/
     border-radius: 50%;
     object-fit: cover;
-    object-position: top;
+    object-position: 50% 75%;
     /**Código Abaixo - para ajustar o espaçamento da imagem**/
     margin-top: 100px;
     margin-bottom: 40px;
@@ -49,7 +49,7 @@ ul{
 
 li{    
     margin-top: 20px;
-    border: 1px solid burlywood;
+    border: 1px solid #7ac9a2;
     list-style: none;
     float: unset;
     width: 300px;
@@ -60,7 +60,7 @@ li{
     align-items: center;
     justify-content: center;
     font-size: 25px;  
-    background-color:burlywood;   
+    background-color: #7ac9a2;   
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  
     flex-direction: column;   
 }
@@ -99,13 +99,26 @@ nav ul li a:hover{
 
 /* Animações de fundo gradiente*/
 @keyframes backgroundAnimation {
-    0% { background-color: #f5e8d6; } /* Um tom muito claro de Burlywood */
-    50% { background-color: #e7d6c1; } /* Um tom levemente mais escuro */
-    100% { background-color: #f5e8d6; } /* Retorna para o tom claro */
+    0% {
+        background: linear-gradient(45deg, #D0E8D4, #E1F2E1, #F1F9F1);
+      }
+      25% {
+        background: linear-gradient(45deg, #D0E8D4, #E1F2E1, #F1F9F1);
+      }
+      50% {
+        background: linear-gradient(45deg, #E1F2E1, #F1F9F1, #D0E8D4);
+      }
+      75% {
+        background: linear-gradient(45deg, #F1F9F1, #D0E8D4, #E1F2E1);
+      }
+      100% {
+        background: linear-gradient(45deg, #D0E8D4, #E1F2E1, #F1F9F1);
+      }
 }
 
 body {
-    animation: backgroundAnimation 10s infinite; /* Animação de fundo suave */
+    animation: backgroundAnimation 12s ease infinite; /* Animação de fundo suave */
+    background-size: 400% 400%;
 }
 
 /*caso desejar deixar o layout responsivo a resoluções menores*/
