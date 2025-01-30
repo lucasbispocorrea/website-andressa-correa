@@ -1,34 +1,34 @@
 // Função para copiar o código do cupom
 document.querySelectorAll('.button').forEach(button => {
-    button.addEventListener('click', function(event) { // Previne o comportamento padrão do link
+    button.addEventListener('click', function(event) { 
         event.preventDefault();
 
-        const couponCode = this.previousElementSibling.innerText; // Pega o código
+        const couponCode = this.previousElementSibling.innerText; 
         const message = `Código do cupom "${couponCode}" copiado com sucesso!`; // Mensagem personalizada
         const notification = document.getElementById('notification');
 
         // Usando o Clipboard API para copiar o código para a área de transferência
         navigator.clipboard.writeText(couponCode).then(() => {
             notification.innerText = message; // Atualiza a mensagem
-            notification.style.display = 'block'; // Mostra a notificação
+            notification.style.display = 'block'; 
             setTimeout(() => {
                 notification.style.opacity = '0'; // Efeito de fade-out
                 setTimeout(() => {
                     notification.style.display = 'none'; // Oculta a notificação após o fade-out
-                    notification.style.opacity = '1'; // Reseta a opacidade
+                    notification.style.opacity = '1'; 
                 }, 500);
             }, 2000); // Exibe a notificação por 2 segundos
         }).catch(err => {
             console.error('Erro ao copiar o código: ', err);
-            notification.innerText = 'Ocorreu um erro ao copiar o código.'; // Mensagem de erro
+            notification.innerText = 'Ocorreu um erro ao copiar o código.'; 
             notification.style.display = 'block'; // Exibe a notificação
             setTimeout(() => {
-                notification.style.opacity = '0'; // Fade-out
+                notification.style.opacity = '0'; 
                 setTimeout(() => {
-                    notification.style.display = 'none'; // Oculta a notificação
-                    notification.style.opacity = '1'; // Reseta a opacidade
+                    notification.style.display = 'none'; 
+                    notification.style.opacity = '1'; 
                 }, 500);
-            }, 2000); // Exibe a notificação de erro por 2 segundos
+            }, 2000); 
         });
     });
 });
@@ -41,9 +41,9 @@ function filterCoupons() {
     coupons.forEach(function(coupon) {
         let textContent = coupon.textContent.toLowerCase();
         if (textContent.includes(searchTerm)) {
-            coupon.style.display = ''; // Exibe o cupom
+            coupon.style.display = ''; 
         } else {
-            coupon.style.display = 'none'; // Oculta o cupom
+            coupon.style.display = 'none'; 
         }
     });
 }
@@ -57,7 +57,7 @@ function toggleDropdown() {
 // Função para filtrar cupons por categoria e atualizar o título
 function filterByCategory(category) {
     const cupons = document.querySelectorAll('.cupom');
-    const categoriaTitulo = document.getElementById('categoria-titulo'); // Título da categoria
+    const categoriaTitulo = document.getElementById('categoria-titulo'); 
 
     // Atualiza o título com base na categoria selecionada
     if (category === 'todos') {
@@ -86,7 +86,7 @@ function filterByCategory(category) {
             if (cupom.classList.contains(category)) {
                 cupom.style.display = 'block'; // Exibe os cupons da categoria
             } else {
-                cupom.style.display = 'none'; // Oculta os outros cupons
+                cupom.style.display = 'none'; 
             }
         });
     }
