@@ -37,3 +37,21 @@ document.querySelectorAll('.button').forEach(button => {
 document.addEventListener('DOMContentLoaded', function(){
     console.log("Página carregada")
 })
+
+
+//função para filtrar cupons
+function filterCoupons() {
+    let searchTerm = document.getElementById('input-busca').value.toLowerCase();
+    
+    let coupons = document.querySelectorAll('.cupom');
+    
+    coupons.forEach(function(coupon) {
+        let textContent = coupon.textContent.toLowerCase();
+        
+        if (textContent.includes(searchTerm)) {
+            coupon.style.display = ''; // Exibe o cupom
+        } else {
+            coupon.style.display = 'none'; 
+        }
+    });
+}

@@ -97,23 +97,40 @@ body {
     background-size: 400% 400%;
 }
 
+.busca-container {
+    margin: 40px 0 0 0;
+    text-align: center;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 .cupons {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto; /* Centraliza a lista de cupons */
     padding: 20px;
-    display: flex;
-    flex-direction: column; 
-    border-radius: 15px;
-    font-size: 17px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
 }
 
 /*Card de cada cupom*/
-.cupom {    
+.cupom {   
+    width: calc(50% - 20px);
+    max-width: 400px;
+    min-width: 250px;
     border-radius: 5px;
     padding: 15px;
-    margin: 10px 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);    
-    background: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */ 
+    
     
 }
 
@@ -201,7 +218,16 @@ div p a:hover{
     body {font-size: 16px;
 
     }
+    .cupom {
+        width: calc(50% - 10px);
+    }
 
+}
+
+@media (max-width: 600px) {
+    .cupom {
+        width: 100%; /* Uma coluna */
+    }
 }
 
 
