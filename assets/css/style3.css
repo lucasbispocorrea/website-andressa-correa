@@ -97,9 +97,86 @@ body {
     background-size: 400% 400%;
 }
 
+/*******************inicio do campo de filtro************************************/
+#categoria-selecionada {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#categoria-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 300px;
+}
+
+
+/* Estilo geral do filtro */
+.filtro-categorias {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    margin-left: 300px;
+}
+
+/* Estilo do botão que abre o dropdown */
+.filtro-categorias .dropdown {
+    background-color: #7ac9a2; /* Cor de fundo verde */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+/* Mudando a cor de fundo ao passar o mouse */
+.filtro-categorias .dropdown:hover {
+    background-color: rgb(32, 107, 61);
+}
+
+/* Estilo da lista suspensa (dropdown) */
+.filtro-categorias .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px #7ac9a2;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+/* Estilo dos itens dentro da lista suspensa */
+.filtro-categorias .dropdown-content a {
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+/* Mudando a cor do item ao passar o mouse */
+.filtro-categorias .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Exibindo o menu dropdown quando o botão for clicado */
+.filtro-categorias .dropdown-content.show {
+    display: block; /* Exibe o menu quando a classe 'show' é adicionada */
+}
+
+/*******************final do campo de filtro************************************/
+
+/*Barra de busca*/
+
+
 .busca-container {
-    margin: 40px 0 0 0;
-    text-align: center;
+    margin: 20px 0 0 300px;
+    text-align: left;    
 }
 
 #searchInput {
@@ -176,7 +253,7 @@ div p a:hover{
 }
 
 .button:hover {
-    background: rgb(112, 87, 55); /* Cor escura ao passar o mouse */
+    background: rgb(32, 107, 61); /* Cor escura ao passar o mouse */
 }
 
 /*Mensagem de código copiado*/
@@ -221,6 +298,16 @@ div p a:hover{
     .cupom {
         width: calc(50% - 10px);
     }
+    .busca-container {
+        margin: 20px 0 0 0;          
+    }
+    #categoria-titulo {        
+        margin-left: 0px;
+    }  
+    
+    .filtro-categorias {       
+        margin-left: 0px;
+    }
 
 }
 
@@ -242,3 +329,4 @@ footer{
     padding-top: 100px;
     padding-bottom: 50px;        
 }
+

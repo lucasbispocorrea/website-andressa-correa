@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /> <!--Cache-->
     <meta http-equiv="Pragma" content="no-cache" /><!--Cache-->
     <meta http-equiv="Expires" content="0" /><!--Cache-->
-    <link rel="stylesheet" href="assets/css/style3.css?v=1.0.25">
+    <link rel="stylesheet" href="assets/css/style3.css?v=300125.3">
     <title>Andressa Correa | Cupons & Descontos</title>
     <meta name="description" content="">
     <!--outros meta tags-->
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Andressa correa UGC Creator - Descontos em produtos de beleza e viagens">
-    <meta property="og:description" content="Cupons e descontos para utilizar em compras e assinaturas ded beleza, moda fitness e viagens">
+    <meta property="og:description"
+        content="Cupons e descontos para utilizar em compras e assinaturas ded beleza, moda fitness e viagens">
     <meta property="og:image" content="URL da imagem">
     <meta property="og:url" content="https://andressacorrea.lovestoblog.com/cupons-descontos.html">
 
@@ -22,13 +24,14 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XG3LCELMV1"></script>
     <script>
-         window.dataLayer = window.dataLayer || [];
-         function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-         gtag('config', 'G-XG3LCELMV1');
+        gtag('config', 'G-XG3LCELMV1');
     </script>
 </head>
+
 <body>
     <!--Menu de navegação-->
     <nav class="barra-navegacao">
@@ -38,10 +41,30 @@
             <li><a href="cupons-descontos.html">Cupons e descontos</a></li>
         </ul>
     </nav>
-    
+
     <header>
-         <h1>Cupons e Descontos</h1>
+        <h1>Cupons e Descontos</h1>
     </header>
+
+
+    <!-- Título para a categoria selecionada no filtro-->
+    <div id="categoria-selecionada">
+        <h2 id="categoria-titulo">Todos os Cupons</h2>
+    </div>
+
+    <!-- Filtro de Categorias -->
+    <div class="filtro-categorias">
+        <span class="dropdown" onclick="toggleDropdown()">Categorias</span>
+        <div class="dropdown-content" id="categorias">
+            <a href="javascript:void(0);" onclick="filterByCategory('todos')">Todos</a>
+            <a href="javascript:void(0);" onclick="filterByCategory('viagens')">Viagens e Turismo</a>
+            <a href="javascript:void(0);" onclick="filterByCategory('saude')">Saúde e Bem-estar</a>
+            <a href="javascript:void(0);" onclick="filterByCategory('moda')">Moda e Acessórios</a>
+            <a href="javascript:void(0);" onclick="filterByCategory('cosmeticos')">Cosméticos e Beleza</a>
+            <a href="javascript:void(0);" onclick="filterByCategory('casa')">Casa e Decoração</a>
+            <a href="javascript:void(0);" onclick="filterByCategory('negocios')">Desenvolvimento Pessoal e Negócios</a>
+        </div>
+    </div>
 
     <!-- Campo de busca -->
     <div class="busca-container">
@@ -49,169 +72,194 @@
     </div>
 
     <!--cupopns disponíveis-->
-    <div class="cupons">
+    <div class="cupons" id="cupons">
+
         <!--Parceiro-1-->
-        <div class="cupom">            
+        <div class="cupom viagens">
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="https://reservailhabela.com/" target="_blank">Hotel Reserva Ilha Bela</a>                 
-            </p> 
+                <a href="https://reservailhabela.com/" target="_blank">Hotel Reserva Ilha Bela</a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
-                <a href="https://www.instagram.com/reserva.ilhabela/" target="_blank">@reserva.ilhabela</a>                  
-            </p>            
+                <a href="https://www.instagram.com/reserva.ilhabela/" target="_blank">@reserva.ilhabela</a>
+            </p>
             <p>Cupom: <strong class="codigo-cupom">ANDRESSAC</strong></p>
-            <a href="#" class="button">Copiar Código</a>            
+            <a href="#" class="button">Copiar Código</a>
         </div>
+
         <!--Parceiro-2-->
-        <div class="cupom">            
+        <div class="cupom saude">
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="https://linktr.ee/yummy.fit?fbclid=PAZXh0bgNhZW0CMTEAAaYpX8TvkcqTDmR3kGw8cu6rlFg32VsECeJgGRtU-m43nvCGpJ2ecptSjUQ_aem_jcksittHiGv70k06GAXCmA" target="_blank">Yummi Fit (CREATINA em Balas de Caramelo)</a>                 
-            </p> 
+                <a href="https://linktr.ee/yummy.fit?fbclid=PAZXh0bgNhZW0CMTEAAaYpX8TvkcqTDmR3kGw8cu6rlFg32VsECeJgGRtU-m43nvCGpJ2ecptSjUQ_aem_jcksittHiGv70k06GAXCmA"
+                    target="_blank">Yummi Fit (CREATINA em Balas de Caramelo)</a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
-                <a href="https://www.instagram.com/yummyfitoficial/profilecard/?igsh=MWk0czh3aWI4aHQxbQ==" target="_blank">@YummiFitOficial</a>                  
-            </p>            
+                <a href="https://www.instagram.com/yummyfitoficial/profilecard/?igsh=MWk0czh3aWI4aHQxbQ=="
+                    target="_blank">@YummiFitOficial</a>
+            </p>
             <p>Cupom: <strong class="codigo-cupom">ANDRESSAC5</strong></p>
-            <a href="#" class="button">Copiar Código</a>            
+            <a href="#" class="button">Copiar Código</a>
         </div>
+
         <!--Parceiro-3-->
-        <div class="cupom">            
+        <div class="cupom moda">
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="https://www.timefitnessmoda.com.br/?ref=AND78693" target="_blank">Time Fitness Moda (Roupas Fitness)</a>                 
-            </p> 
+                <a href="https://www.timefitnessmoda.com.br/?ref=AND78693" target="_blank">Time Fitness Moda (Roupas
+                    Fitness)</a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
-                <a href="https://www.instagram.com/timefitnessmoda/" target="_blank">@timefitnessmoda</a>                  
-            </p>            
+                <a href="https://www.instagram.com/timefitnessmoda/" target="_blank">@timefitnessmoda</a>
+            </p>
             <p>Cupom: <strong class="codigo-cupom">ANDRESSAC</strong></p>
-            <a href="#" class="button">Copiar Código</a>            
+            <a href="#" class="button">Copiar Código</a>
         </div>
+
         <!--Parceiro-4-->
-        <div class="cupom">            
+        <div class="cupom saude">
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="https://youvibes.com.br/?fbclid=PAZXh0bgNhZW0CMTEAAaaTJJmWEdEa8OKVBB_G53QfELkFRkLpI7PajcUGkWtchhV5QALZ20Ylhx8_aem_holzX61m65Do8qCy8O-x6A" target="_blank">Use You Vibes (Colágeno)</a>                 
-            </p> 
+                <a href="https://youvibes.com.br/?fbclid=PAZXh0bgNhZW0CMTEAAaaTJJmWEdEa8OKVBB_G53QfELkFRkLpI7PajcUGkWtchhV5QALZ20Ylhx8_aem_holzX61m65Do8qCy8O-x6A"
+                    target="_blank">Use You Vibes (Colágeno)</a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
-                <a href="https://www.instagram.com/useyouvibes/" target="_blank">@useyouvibes</a>                  
-            </p>            
+                <a href="https://www.instagram.com/useyouvibes/" target="_blank">@useyouvibes</a>
+            </p>
             <p>Cupom: <strong class="codigo-cupom">ANDRESSAC</strong></p>
-            <a href="#" class="button">Copiar Código</a>            
+            <a href="#" class="button">Copiar Código</a>
         </div>
+
         <!--Parceiro-5-->
-        <div class="cupom">            
+        <div class="cupom cosmeticos">
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="https://sua.glam.com.br/promocoes/partner/ANDRESSAC?utm_source=glampartner&utm_medium=influencer&utm_campaign=partner_basic&utm_content=ANDRESSAC&cupom=ANDRESSAC" target="_blank">Glam Box (Clube de Assinatura Cosméticos)</a>                 
-            </p> 
+                <a href="https://sua.glam.com.br/promocoes/partner/ANDRESSAC?utm_source=glampartner&utm_medium=influencer&utm_campaign=partner_basic&utm_content=ANDRESSAC&cupom=ANDRESSAC"
+                    target="_blank">Glam Box (Clube de Assinatura Cosméticos)</a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
-                <a href="https://www.instagram.com/universo.glam/" target="_blank">@universo.glam</a>                  
-            </p>            
+                <a href="https://www.instagram.com/universo.glam/" target="_blank">@universo.glam</a>
+            </p>
             <p>Cupom: <strong class="codigo-cupom">ANDRESSAC</strong></p>
-            <a href="#" class="button">Copiar Código</a>            
+            <a href="#" class="button">Copiar Código</a>
         </div>
+
         <!--Parceiro-6-->
-        <div class="cupom"> 
-            <p>Queima Diária (Plataforma de Atividades Físicas)</p>                      
+        <div class="cupom saude">
+            <p>Queima Diária (Plataforma de Atividades Físicas)</p>
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="http://quei.ma/c/2e1gc930792j" target="_blank">Queima Diária</a>               
-            </p> 
+                <a href="http://quei.ma/c/2e1gc930792j" target="_blank">Queima Diária</a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
-                <a href="https://www.instagram.com/queimadiaria/" target="_blank">@queimadiaria</a>                  
-            </p>                       
+                <a href="https://www.instagram.com/queimadiaria/" target="_blank">@queimadiaria</a>
+            </p>
         </div>
+
         <!--Parceiro-7-->
-        <div class="cupom"> 
-            <p>Vista-Me (Clube de Assinaturas - Roupas)</p>            
+        <div class="cupom moda">
+            <p>Vista-Me (Clube de Assinaturas - Roupas)</p>
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="https://vistame.net/?utm=MTgxMjU3" target="_blank">Vista-Me</a>                 
-            </p> 
+                <a href="https://vistame.net/?utm=MTgxMjU3" target="_blank">Vista-Me</a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
-                <a href="https://www.instagram.com/vistameoficial/profilecard/?igsh=N2Z4azVzdnMxc3o1" target="_blank">@vistameoficial
-                </a>                  
-            </p>                       
+                <a href="https://www.instagram.com/vistameoficial/profilecard/?igsh=N2Z4azVzdnMxc3o1"
+                    target="_blank">@vistameoficial
+                </a>
+            </p>
         </div>
+
         <!--Parceiro-8-->
-        <div class="cupom">            
+        <div class="cupom cosmeticos">
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="https://lp.puraderme.com.br/serum-anti-acne-puraderme" target="_blank">Puraderme (Sérum Anti-Acne) </a>                 
-            </p> 
+                <a href="https://lp.puraderme.com.br/serum-anti-acne-puraderme" target="_blank">Puraderme (Sérum
+                    Anti-Acne) </a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
-                <a href="https://www.instagram.com/puraderme/profilecard/?igsh=MTdqYjdhYzhuenhjbA==" target="_blank">@puraderme</a>                  
-            </p>            
+                <a href="https://www.instagram.com/puraderme/profilecard/?igsh=MTdqYjdhYzhuenhjbA=="
+                    target="_blank">@puraderme</a>
+            </p>
             <p>Cupom: <strong class="codigo-cupom">ANDRESSAC20</strong></p>
-            <a href="#" class="button">Copiar Código</a>            
+            <a href="#" class="button">Copiar Código</a>
         </div>
+
         <!--Parceiro-9-->
-        <div class="cupom">            
+        <div class="cupom casa">
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="https://magicartesanais.lojavirtualnuvem.com.br/?fbclid=PAZXh0bgNhZW0CMTEAAaYVOdIppTf4URrjnRBzOTCtMxy00hphbX0zZPSVAZ_XypnKvGKZpOi6csA_aem_POeYOhbBQMatmg886zjR-g" target="_blank">Magic Artesanais (Home Spray e Velas Aromáticas)</a>                 
-            </p> 
+                <a href="https://magicartesanais.lojavirtualnuvem.com.br/?fbclid=PAZXh0bgNhZW0CMTEAAaYVOdIppTf4URrjnRBzOTCtMxy00hphbX0zZPSVAZ_XypnKvGKZpOi6csA_aem_POeYOhbBQMatmg886zjR-g"
+                    target="_blank">Magic Artesanais (Home Spray e Velas Aromáticas)</a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
-                <a href="https://www.instagram.com/magicartesanais/profilecard/?igsh=ZzU3a3YyMThpeDE=" target="_blank">@magicartesanais</a>                  
-            </p>            
+                <a href="https://www.instagram.com/magicartesanais/profilecard/?igsh=ZzU3a3YyMThpeDE="
+                    target="_blank">@magicartesanais</a>
+            </p>
             <p>Cupom: <strong class="codigo-cupom">ANDRESSA10</strong></p>
-            <a href="#" class="button">Copiar Código</a>            
+            <a href="#" class="button">Copiar Código</a>
         </div>
+
         <!--Parceiro-10-->
-        <div class="cupom">            
+        <div class="cupom cosmeticos">
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="https://lefruitcosmetics.com/?utm_source=social&utm_medium=instagram&utm_campaign=clienteset24&utm_id=clienteset24&fbclid=PAZXh0bgNhZW0CMTEAAaZ8l9lzocSayQEaATLuIU9_DjxxZpAXS8gTnN12MWbuScp-x4GNOqSc8gc_aem_eDqR0SPtO0pvyZ4rfyqTLA" target="_blank">Le Fruit Cosmetics (Desodorante Corporal)</a>                 
-            </p> 
+                <a href="https://lefruitcosmetics.com/?utm_source=social&utm_medium=instagram&utm_campaign=clienteset24&utm_id=clienteset24&fbclid=PAZXh0bgNhZW0CMTEAAaZ8l9lzocSayQEaATLuIU9_DjxxZpAXS8gTnN12MWbuScp-x4GNOqSc8gc_aem_eDqR0SPtO0pvyZ4rfyqTLA"
+                    target="_blank">Le Fruit Cosmetics (Desodorante Corporal)</a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
-                <a href="https://www.instagram.com/lefruitcosmetic/profilecard/?igsh=NHlldm5hcGJsdXNm" target="_blank">@lefruitcosmetic</a>                  
-            </p>            
+                <a href="https://www.instagram.com/lefruitcosmetic/profilecard/?igsh=NHlldm5hcGJsdXNm"
+                    target="_blank">@lefruitcosmetic</a>
+            </p>
             <p>Cupom: <strong class="codigo-cupom">ANDRESSAC</strong></p>
-            <a href="#" class="button">Copiar Código</a>            
+            <a href="#" class="button">Copiar Código</a>
         </div>
+
         <!--Parceiro-11-->
-        <div class="cupom"> 
-            <a>Fabio Rossetto (Especialista em Crescimento de Negócios)</a>             
+        <div class="cupom negocios">
+            <a>Fabio Rossetto (Especialista em Crescimento de Negócios)</a>
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="https://pay.kiwify.com.br/lz6JrKn?afid=JCyFq1eO" target="_blank">Ebook</a>                      
-            </p> 
+                <a href="https://pay.kiwify.com.br/lz6JrKn?afid=JCyFq1eO" target="_blank">Ebook</a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
-                <a href="https://pay.kiwify.com.br/o6B1BEj?afid=JCyFq1eO" target="_blank">Ebook + Mentoria</a>                      
-            </p> 
+                <a href="https://pay.kiwify.com.br/o6B1BEj?afid=JCyFq1eO" target="_blank">Ebook + Mentoria</a>
+            </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
-                <a href="https://www.instagram.com/fabiobrossetto/profilecard/?igsh=MXNpdWU5YnlnYzBvcg==" target="_blank">@fabiobrossetto</a>  
-            </p> 
-                       
-        </div>        
+                <a href="https://www.instagram.com/fabiobrossetto/profilecard/?igsh=MXNpdWU5YnlnYzBvcg=="
+                    target="_blank">@fabiobrossetto</a>
+            </p>
+
+        </div>
     </div>
     <!--Mensagem de cupo copiado-->
-    <div id="notification" class="notification" style="display: none;"></div>    
+    <div id="notification" class="notification" style="display: none;"></div>
 
     <!--ícone Whatsapp-->
     <div>
         <a href="https://wa.me/5511972243819" class="whatsapp-icon" target="_blank">
             <i class="fab fa-whatsapp"></i>
-        </a>  
-    </div>  
+        </a>
+    </div>
     <!-- Rodapé -->
     <footer>
         &copy; 2025 Andressa Correa.
     </footer>
 
     <!--JavaScript-->
-    <script src="assets/js/cupons.js?v=300125"></script>
+    <script src="assets/js/cupons.js?v=300125.2"></script>
 </body>
+
 </html>
