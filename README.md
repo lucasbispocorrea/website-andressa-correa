@@ -10,7 +10,7 @@
 <p align="center">A página foi desenvolvida, para divulgação e postagem de cupons e descontos.</p>
 
 <p align="center">
-    <a href="https://andressacorrea.lovestoblog.com" about="_blanc">
+    <a href="https://andressacorrea.lovestoblog.com" target="_blanc">
         <img src=https://img.shields.io/badge/📱Visite_o_Site-000?style=for-the-badge&logo=project />
     </a>
 </p>
