@@ -1,10 +1,10 @@
 # WEB-SITE ANDRESSA CORREA
 
-## Site desenvolvido para a criadora de conteúdo digital Andressa Correa
-A página foi desenvolvida, para divulgação e postage de cupons da influenciadora Andressa.
+## Site desenvolvido para a criadora de conteúdo digital, Andressa Correa
+A página foi desenvolvida, para divulgação e postagem de cupons e descontos.
 - Site: https://andressacorrea.lovestoblog.com
 
-![Captura de tela 2025-02-18 113205](https://github.com/user-attachments/assets/afb2e456-ca46-45d9-ba9b-0fa407826211)
+![Print Home](./assets/img/Captura%20de%20tela%202025-02-18%20113205.png)
 
 Utilizei HTML e CSS em todas as funcionalidades e páginas, também como Bootstraps e paralax nas imagens do site
 
