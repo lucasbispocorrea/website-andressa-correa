@@ -1,4 +1,4 @@
-// Função para copiar o código do cupom
+// Copiar o código do cupom
 document.querySelectorAll('.button').forEach(button => {
     button.addEventListener('click', function(event) { 
         event.preventDefault();
@@ -96,7 +96,7 @@ function filterByCategory(category) {
     dropdownContent.classList.remove('show'); // Remove a classe 'show' para esconder o dropdown após a seleção
 }
 
-// Fechar o filtro caso clique fora dele
+// Fechar o filtro clique fora 
 window.onclick = function(event) {
     const dropdownContent = document.getElementById("categorias");
     if (!event.target.matches('.dropdown, .dropdown *')) {
