@@ -7,7 +7,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /> <!--Cache-->
     <meta http-equiv="Pragma" content="no-cache" /><!--Cache-->
     <meta http-equiv="Expires" content="0" /><!--Cache-->
-    <link rel="stylesheet" href="assets/css/style3.css?v=300125.3">
+
     <title>Andressa Correa | Cupons & Descontos</title>
     <meta name="description" content="">
     <!--outros meta tags-->
@@ -15,12 +15,21 @@
     <meta property="og:title" content="Andressa correa UGC Creator - Descontos em produtos de beleza e viagens">
     <meta property="og:description"
         content="Cupons e descontos para utilizar em compras e assinaturas ded beleza, moda fitness e viagens">
-    <meta property="og:image" content="URL da imagem">
+    <meta property="og:image" content="assets/img/img6_blurred.jpeg">
     <meta property="og:url" content="https://andressacorrea.lovestoblog.com/cupons-descontos.html">
+    <meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
     <link rel="icon" href="assets/img/icon_dc45598780d723602ff599e523ef54ca.ico">
-    <!--link ara obter o ícone do wpp para o rodppé da página-->
+
+    <!--link para obter o ícone do wpp para o rodppé da página-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/style3.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400&display=swap"
+            rel="stylesheet">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XG3LCELMV1"></script>
     <script>
@@ -30,21 +39,41 @@
 
         gtag('config', 'G-XG3LCELMV1');
     </script>
+
+
 </head>
 
 <body>
-    <!--Menu de navegação-->
-    <nav class="barra-navegacao">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobremim.html">Sobre mim</a></li>
-            <li><a href="cupons-descontos.html">Cupons e descontos</a></li>
-        </ul>
-    </nav>
-
+    <!-- cabeçalho da página-->
     <header>
-        <h1>Cupons e Descontos</h1>
+        <!-- Menu Topo Fixo -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"> <strong>Andressa Correa | UGC & Influencer</strong> </a>
+                <ul class="navbar-nav d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#sobre"><i class="bi bi-person"></i>Sobre Mim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#portfolio"><i class="bi bi-briefcase"
+                                target="_blank"></i>Portfólio & Orçamentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#curso"><i
+                                class="bi bi-emoji-laughing" target="_blank"></i>Curso UGC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cupons-descontos.html"><i class="bi bi-person"></i>Cupons &
+                            Descontos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
+
+    <aside>
+        <h1 id="cabecalho-cupom">Cupons & Descontos</h1>
+    </aside>
 
 
     <!-- Título para a categoria selecionada no filtro-->
@@ -54,7 +83,7 @@
 
     <!-- Filtro de Categorias -->
     <div class="filtro-categorias">
-        <span class="dropdown" onclick="toggleDropdown()">Categorias</span>
+        <span class="dropdown btn-categoria" onclick="toggleDropdown()">Filtros</span>
         <div class="dropdown-content" id="categorias">
             <a href="javascript:void(0);" onclick="filterByCategory('todos')">Todos</a>
             <a href="javascript:void(0);" onclick="filterByCategory('viagens')">Viagens e Turismo</a>
@@ -93,7 +122,7 @@
             <p class="parceiro">
                 <img src="assets/img/local-na-rede-internet.png" alt="Ícone" class="icon">
                 <a href="https://linktr.ee/yummy.fit?fbclid=PAZXh0bgNhZW0CMTEAAaYpX8TvkcqTDmR3kGw8cu6rlFg32VsECeJgGRtU-m43nvCGpJ2ecptSjUQ_aem_jcksittHiGv70k06GAXCmA"
-                    target="_blank">Yummi Fit (CREATINA em Balas de Caramelo)</a>
+                    target="_blank">Yummi Fit (Creatina em Balas de Caramelo)</a>
             </p>
             <p class="parceiro">
                 <img src="assets/img/instagram icon.png" alt="Ícone" class="icon">
@@ -253,13 +282,57 @@
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
+    
     <!-- Rodapé -->
-    <footer>
-        &copy; 2025 Andressa Correa.
+    <footer class="footer">
+        <div class="container">
+            <!-- Contato -->
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul>
+                    <li><a><i class="bi bi-envelope"></i> andressacorreaugc@gmail.com</a></li>
+                    <li><a href="https://wa.me/5511972243819" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a></li>
+                    <li><a href="https://www.instagram.com/andressacorreaa?igsh=aTlrbGtieThsZjBr" target="_blank"><i class="bi bi-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.threads.net/@andressacorreaa?xmt=AQGzQ7M9W25tBneRwEHG8w5zua476jZMXt6rouf0ylmkxY0" target="_blank"><i class="bi bi-threads"></i> Threads</a></li>
+                    <li><a href="https://www.tiktok.com/@andressacorreaaaa?lang=pt-BR&is_from_webapp=1&sender_device=mobile&sender_web_id=7423085506868954629" target="_blank"><i class="bi bi-tiktok"></i> TikTok</a></li>
+                </ul>
+            </div>
+    
+            <!-- Avisos Legais -->
+            <div class="footer-col">
+                <h4>Avisos Legais</h4>
+                <ul>
+                    <li><a href="termos.html">Termos de Uso</a></li>
+                    <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Desenvolvido por e Copyright -->
+        <div class="footer-bottom">
+            <p>🛠️ Desenvolvido por <strong>Lucas Correa</strong></p>
+            <p>
+                <a href="https://www.linkedin.com/in/lucas-bispo-5b7592168/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/lucasbispocorrea" target="_blank"><i class="bi bi-github"></i></a>
+            </p>
+            <p>© <span id="ano"></span> Todos os direitos reservados.</p>
+        </div>
     </footer>
+    
+    <script>
+        // Atualiza o ano automaticamente
+        document.getElementById("ano").textContent = new Date().getFullYear();
+    </script>
+    
+    <!-- Bootstrap Icons carregado apenas no rodapé -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
     <!--JavaScript-->
-    <script src="assets/js/cupons.js?v=300125.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="assets/js/cupons.js?v=<?php echo time(); ?>"></script>
+    
 </body>
 
 </html>

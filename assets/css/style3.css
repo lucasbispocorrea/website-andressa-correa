@@ -1,52 +1,31 @@
 body{
     text-align:justify;
     font-family: 'Times New Roman', Times, serif;
-    background-color: white;
-    margin-top: 10px;       
+    background-color: #f5f8f2;
+    margin: 0;     
+    padding: 0; 
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-size: 17px;
-    padding: 50px;    
+    font-size: 17px;       
     /*background: linear-gradient(135deg, white 0%, rgb(252, 242, 227) 100%);*/
 }
 
-/* Menu de Navegação */
-.barra-navegacao {
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 100; /* Garante que o menu fique acima do conteúdo */
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5em;    
+    font-family: 'Poppins', sans-serif; 
+    color: #b8e1b0; /* Verde bem suave */
 }
 
-.barra-navegacao ul {
-    list-style: none; 
-    display: flex; /* Exibe os itens em linha */
-    justify-content: center; /* Centraliza os itens */
-    margin: 0;
-    padding: 0;
+#cabecalho-cupom{
+    font-size: 2em;
+    margin-top: 125px;
+    margin-bottom: -25px;
 }
 
-.barra-navegacao li {
-    margin: 0 20px; /* Espaçamento entre os itens */
-}
-
-.barra-navegacao a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: #7ac9a2; 
-    font-weight: bold; /* Texto em negrito */
-    transition: color 0.3s, transform 0.3s; /* Transição suave */
-}
-
-.barra-navegacao a:hover {
-    color: #7ac9a2; /* Muda a cor ao passar o mouse */
-    transform: translateY(-2px); /* Levanta um pouco o link */
-}
 
 /*Caixa de alerta com cópia do código do cupom*/
 .frase-container{
@@ -64,38 +43,57 @@ body{
     height: 25px;
 }
 
-
-/*style da página*/
-h1 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2.5em;
-    color: #7ac9a2;
+/****************************** MENU ************************/
+.navbar {
+    background-color: #c8e6c9; /* Verde muito suave */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 12px 0;
+    border-bottom: 1px solid #a0d6a0;
+    font-family: 'Poppins', sans-serif;
+    
 }
 
-/* Animações de fundo gradiente*/
-@keyframes backgroundAnimation {
-    0% {
-        background: linear-gradient(45deg, #D0E8D4, #E1F2E1, #F1F9F1);
-      }
-      25% {
-        background: linear-gradient(45deg, #D0E8D4, #E1F2E1, #F1F9F1);
-      }
-      50% {
-        background: linear-gradient(45deg, #E1F2E1, #F1F9F1, #D0E8D4);
-      }
-      75% {
-        background: linear-gradient(45deg, #F1F9F1, #D0E8D4, #E1F2E1);
-      }
-      100% {
-        background: linear-gradient(45deg, #D0E8D4, #E1F2E1, #F1F9F1);
-      }
+.navbar .bi {
+    display: none !important; /* Remove ícones do menu */
 }
 
-body {
-    animation: backgroundAnimation 12s ease infinite; /* Animação de fundo suave */
-    background-size: 400% 400%;
+.section-header {
+    color: #c8e6c9; /* Verde pastel mais suave */
 }
+
+
+.navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar-nav a {
+    color: #2e4a3f; /* Cor suave */
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 17.5px;
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+
+.navbar-nav a:hover {
+    color: #7bbf7b; /* Verde mais suave e delicado */
+}
+
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-link i {
+    margin-right: 8px;
+}
+
+
 
 /*******************inicio do campo de filtro************************************/
 #categoria-selecionada {
@@ -104,10 +102,12 @@ body {
 }
 
 #categoria-titulo {
-    font-size: 24px;
+    font-size: 15px;
     font-weight: bold;
     color: #000000;
     margin-left: 300px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 0 20px 0;
 }
 
 
@@ -121,19 +121,20 @@ body {
 
 /* Estilo do botão que abre o dropdown */
 .filtro-categorias .dropdown {
-    background-color: #7ac9a2; /* Cor de fundo verde */
-    color: white;
+    background-color: #c8e6c9; /* Verde muito suave */
+    color: #2e4a3f; /* Cor contrastante e suave */
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Transição suave */
 }
 
 /* Mudando a cor de fundo ao passar o mouse */
 .filtro-categorias .dropdown:hover {
-    background-color: rgb(32, 107, 61);
+    background-color: #a0d6a0; /* Verde ainda mais suave */
+    color: #2e4a3f;
 }
 
 /* Estilo da lista suspensa (dropdown) */
@@ -195,6 +196,7 @@ body {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 30px;
     
 }
 
@@ -206,7 +208,7 @@ body {
     border-radius: 5px;
     padding: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);    
-    background: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */ 
+    background: #e0eadf54
     
     
 }
@@ -244,16 +246,19 @@ div p a:hover{
 }
 
 .button {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #7ac9a2; 
-    color: white;
+    background-color: #c8e6c9; /* Verde muito suave */
+    color: #2e4a3f; /* Cor contrastante e suave */
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: 400;
     text-decoration: none;
-    border-radius: 5px;
+
 }
 
 .button:hover {
-    background: rgb(32, 107, 61); /* Cor escura ao passar o mouse */
+    background-color: #a0d6a0; /* Verde ainda mais suave */
+    color: #2e4a3f;
+    text-decoration: none;
 }
 
 /*Mensagem de código copiado*/
@@ -295,11 +300,44 @@ div p a:hover{
     body {font-size: 16px;
 
     }
+
+    .navbar-nav a {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-brand {
+        text-align: left;
+        width: 100%;
+        margin-bottom: 10px;
+        justify-content: right;
+        text-align: center;
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+
+    .nav-link {
+        white-space: wrap; /* Garante que os links não quebrem linha */
+        padding: 5px 10px;
+    }
+
     .cupom {
         width: calc(50% - 10px);
     }
     .busca-container {
-        margin: 20px 0 0 0;          
+        margin: 20px 0 0 10px;          
+    }
+
+    .btn-categoria{
+        margin-left: 10px;
     }
     #categoria-titulo {        
         margin-left: 0px;
@@ -318,15 +356,97 @@ div p a:hover{
 }
 
 
-/*Rodpé da página*/
-footer{
-    /**position: fixed;**/
-    bottom: 0;
+/************************************** RODAPÉ ********************************/
+/*footer {
+
     width: 100%;
+    background-color: #c8e6c9;
+    color: #2e4a3f;
+    padding: 30px 0;
     text-align: center;
-    padding: 0px;
-    font-size: 14px;
-    padding-top: 100px;
-    padding-bottom: 50px;        
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    flex: 1;
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
+
+footer a {
+    color: #2e4a3f;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}**/
+
+.footer {
+    background-color: #c8e6c9;
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 2px solid;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.footer ul li a:hover {
+    color: #2e4a3f;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #2e4a3f;
+}
+
+.footer-bottom a {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #2e4a3f;
+    transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #2e4a3f;
+}

@@ -1,0 +1,118 @@
+/* styles-termos-politica.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f8f2;
+    color: #2e4a3f;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #c8e6c9;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #2e4a3f;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #7bbf7b;
+}
+
+p {
+    line-height: 1.6;
+}
+
+main a {
+    color: #2e4a3f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/******************************  FOOTER  ******************************/
+.footer {
+    background-color: #c8e6c9;
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 2px solid;
+    
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin-left: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.footer ul li a:hover {
+    color: #2e4a3f;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #2e4a3f;
+}
+
+.footer-bottom a {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #2e4a3f;
+    transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #2e4a3f;
+}
+
