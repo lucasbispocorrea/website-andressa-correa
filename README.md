@@ -1,8 +1,16 @@
-<h1 align="center">WEB-SITE ANDRESSA CORREA</h1>
+[HTML__BADGE]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
+[CSS__BADGE]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
+[JAVASCRIPT__BADGE]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
+[PROJECT__BADGE]: https://img.shields.io/badge/📱Visite_o_Site-000?style=for-the-badge&logo=project
+[PROJECT__URL]: https://andressacorrea.lovestoblog.com
 
+<h1 align="center">WEB-SITE ANDRESSA CORREA</h1>
 
 <h2 align="center">Site desenvolvido para a criadora de conteúdo digital, Andressa Correa</h2>
 
+![html][HTML__BADGE]
+![css][CSS__BADGE]
+![javascript][JAVASCRIPT__BADGE]
 
 <p align="center">A página foi desenvolvida, para divulgação e postagem de cupons e descontos.</p>
 
@@ -10,7 +18,7 @@
     <a href="https://andressacorrea.lovestoblog.com">📱 Confira o Site</a>
 </p>
 
-
+[![project][PROJECT__BADGE]][PROJECT__URL]
 
 
 ![print-home](./assets/img/Captura%20de%20tela%202025-02-18%20113205.png)
